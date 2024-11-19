@@ -2,14 +2,16 @@ const combine = document.querySelector('body');
 
 combine.addEventListener("keydown", handleKeyDown);
 
-let touche = "a";
+let touche = "r";
 
-function handleKeyDown(){
+function handleKeyDown(event){
 
-    if(touche === combine.value){
-        alert("Bonne combine")
+    console.log(event.altKey);
+    if(event.altKey && touche == event.key){
+        
+        console.log("Bonne combine")
     }else{
-        alert("mauvaise combine")
+        console.log("mauvaise combine")
     }
 
 }
