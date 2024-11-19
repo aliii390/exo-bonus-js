@@ -1,0 +1,22 @@
+
+
+
+body{
+    display: flex;
+    justify-content: center;
+    padding: 20%;
+    background-color: rgb(224, 221, 221);
+}
+
+
+
+.open-btn{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    display: none;
+
+}
