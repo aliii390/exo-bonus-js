@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .case {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    border: 2px solid black;
+    background: rgba(0, 0, 0, 0.1);
+    filter: blur(2px);
+    text-align: center;
+
+  }
+  
+
+  .case:hover{
+    border: 2px solid red;
+    
+  }
+
+  
