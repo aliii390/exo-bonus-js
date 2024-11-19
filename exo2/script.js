@@ -1,31 +1,33 @@
 const button = document.querySelector('#btn');
 const btnRetour = document.querySelector('#btn-retour')
 const openPopup = document.querySelector(".open-btn")
-
-const page = document.querySelector("body")
+// const test = document.getElementById("test");
+const pageBody = document.querySelector("body")
 
 
 
 button.addEventListener("click", handleClik);
 
-btnRetour.addEventListener("click", handleRetour);
+pageBody.addEventListener("click", handleRetour);
 
 function handleClik(event){
     event.preventDefault ();
     openPopup.style.display = "block";
-    page.style.backgroundColor ="gray"
+    pageBody.style.backgroundColor ="gray"
+    event.stopPropagation()
 
 
 }
 
 
-
 function handleRetour(event){
-    event.preventDefault ();
-    openPopup.style.display = "none";
-    page.style.backgroundColor ="white"
-
-
+    
+    if(event.target  != openPopup){
+        event.preventDefault ();
+        openPopup.style.display = "none";
+        pageBody.style.backgroundColor ="white"
+    }
+    
 
 }
 
