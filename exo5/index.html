@@ -8,11 +8,28 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <a href="#" class="button" id="button">Voir</a>
-    <div id="box">
-        <a href="#" class="button control" id="avant">Avant</a>
-        <img src="image/image1.jpg" alt="#" id="image">
-        <a href="#" class="button control" id="apres">apres</a>
-    </div>
+    <div class="carousel">
+        <div class="carousel-track-container">
+          <ul class="carousel-track">
+        
+            <li class="carousel-slide">
+              <img src="image/image1.jpg" alt="Slide 2">
+            </li>
+            <li class="carousel-slide">
+              <img src="image/image2.jpg" alt="Slide 3">
+            </li>
+            <li class="carousel-slide">
+              <img src="image/image3.jpg" alt="Slide 3">
+            </li>
+          </ul>
+        </div>
+        <button class="carousel-button left">◀</button>
+        <button class="carousel-button right">▶</button>
+        <div class="carousel-nav">
+          <button class="carousel-indicator current-slide"></button>
+          <button class="carousel-indicator"></button>
+          <button class="carousel-indicator"></button>
+        </div>
+      </div>
 </body>
 </html>

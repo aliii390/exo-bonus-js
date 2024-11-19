@@ -1,34 +1,83 @@
-body {
-    padding-top: 40px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.button {
-    text-decoration: none;
-    background-color: rgb(116, 41, 41);
-    color: white;
-    border-radius: 10px;
-    padding: 20px;
-    width: 100px;
-    height: 20px;
-    text-align: center;
-}
-
-#box {
-    margin-top: 40px;
-    width: 100%;
-    height: 500px;
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 200px;
-}
-
-img {
+    height: 100vh;
+    background: linear-gradient(135deg, #1a5785, #f5576c);
+  }
+  
+  .carousel {
+    position: relative;
     width: 600px;
-    border: 2px solid black;
-}
-
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-slide {
+    min-width: 100%;
+  }
+  
+  .carousel img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 50%;
+    font-size: 18px;
+  }
+  
+  .carousel-button.left {
+    left: 10px;
+  }
+  
+  .carousel-button.right {
+    right: 10px;
+  }
+  
+  .carousel-nav {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+  }
+  
+  .carousel-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  
+  .carousel-indicator.current-slide {
+    opacity: 1;
+    background: #ff6f61;
+  }
+  
